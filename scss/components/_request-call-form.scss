@@ -1,0 +1,19 @@
+.request-call-form {
+  @extend %font-prim;
+
+  @include font($size: 1.4rem, $height: 1.6rem);
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__phone {
+    margin-right: 20px;
+    color: $color-primary;
+    white-space: nowrap;
+  }
+  &__btn {
+    @include font($size: 1.4rem, $height: 1.4rem);
+    white-space: nowrap;
+  }
+}
