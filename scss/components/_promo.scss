@@ -1,23 +1,32 @@
 .promo {
   &__title {
-    width: 540px;
     @extend %font-add;
-    @include font($size: 4rem, $height: 5.3rem);
+    @include font($size: 2.7rem, $height: 3.7rem);
     color: $color-primary-text;
     text-transform: uppercase;
     &_colored {
       color: $color-primary;
     }
+    &_line {
+      position: relative;
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        top: 49%;
+        margin-left: 15px;
+        border-radius: 10px;
+        background-color: $color-primary;
+      }
+    }
   }
   &__text {
-    width: 450px;
-    padding-bottom: 50px;
     @extend %font-prim;
     color: $color-primary-text;
-    @include font($size: 2.2rem, $height: 3rem, $weight: 400);
+    @include font($size: 1.8rem, $height: 2.9rem, $weight: 400);
   }
   &__btns {
-    width: 450px;
     display: flex;
     justify-content: space-between;
     & button {
@@ -25,6 +34,21 @@
       width: 210px;
       height: 50px;
       white-space: nowrap;
+    }
+  }
+}
+
+@include media-tablet-small {
+  .promo {
+    &__title {
+      @include font($size: 2.2rem, $height: 2.6rem);
+
+      &_line {
+        display: none;
+      }
+    }
+    &__text {
+      @include font($size: 1.4rem, $height: 1.8rem);
     }
   }
 }

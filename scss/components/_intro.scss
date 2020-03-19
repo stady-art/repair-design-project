@@ -1,6 +1,8 @@
 .intro {
   display: flex;
   position: relative;
+  padding-bottom: 45px;
+  background: $color-additional;
 
   &__instagram {
     background: $color-additional;
@@ -24,10 +26,53 @@
     background-color: rgba(0, 0, 0, 0.7);
     background-size: cover;
     background-blend-mode: multiply;
+    .promo {
+      &__title {
+        @include font($size: 4rem, $height: 5.3rem);
+        max-width: 540px;
+      }
+      &__text {
+        @include font($size: 2.2rem, $height: 3rem);
+        max-width: 450px;
+        margin-bottom: 40px;
+      }
+      &__btns {
+        max-width: 450px;
+      }
+    }
   }
   &__scroll-down {
-    bottom: 0;
+    bottom: 0px;
     position: absolute;
-    //  background: $color-additional;
+    background: $color-additional;
+  }
+}
+
+@include media-tablet-small {
+  .intro {
+    &__instagram {
+      display: none;
+    }
+    &__scroll-down {
+      display: none;
+    }
+    .promo {
+      padding: 0px 20px;
+      &__title {
+        @include font($size: 2.3rem, $height: 3rem, $weight: 400);
+      }
+      &__text {
+        @include font($size: 1.8rem, $height: 2rem, $weight: 400);
+        padding-bottom: 20px;
+      }
+      &__btns {
+        display: flex;
+        flex-direction: column;
+        .btn {
+          margin: 10px 0;
+          width: 100%;
+        }
+      }
+    }
   }
 }

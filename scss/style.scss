@@ -8,7 +8,7 @@
 @import "base/base";
 @import "base/logo";
 @import "base/buttons";
-
+@import "base/normalize";
 //Layouts
 @import "layouts/wrapper";
 @import "layouts/header";
@@ -19,5 +19,12 @@
 @import "components/instagram";
 @import "components/promo";
 @import "components/scroll-down";
+@import "components/slider";
+@import "components/list-works";
 
 @import "components/intro";
+@import "components/projects";
+
+.none {
+  display: none;
+}
